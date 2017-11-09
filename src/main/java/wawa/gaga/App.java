@@ -16,13 +16,13 @@ public class App {
         System.out.println("I'm gonna have a nap!");
         int deviation = new Random().nextInt(9);
         long min = 80;
-        if (args.length == 2 && args[0].equals("true") && args[1].equals("short"))
+        if (args.length == 2 && args[0].equals("true") && args[1].equals("true"))
             min = 14;
         min = new Random().nextBoolean() ? min - deviation : min + deviation;
         try {
             System.out.println("Zzz...");
-//            Thread.sleep((min * 60) * 1000);
-            Thread.sleep(1000);
+            Thread.sleep((min * 60) * 1000);
+//            Thread.sleep(1000);
         } catch (InterruptedException e) {
             System.exit(2);
             System.out.println("RIP");
